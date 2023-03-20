@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import logo from "../../assets/lws-logo-light.svg";
 import { useRegisterMutation } from "../../redux/api/authApi";
 import Error from "./../../components/Error/Error";
@@ -14,7 +14,7 @@ const Register = () => {
   });
   const [registerError, setRegisterError] = useState("");
 
-  const [register, { data: response, isLoading, isError, error }] =
+  const [register, { data: response, isLoading, error }] =
     useRegisterMutation();
 
   const navigate = useNavigate();
@@ -58,7 +58,6 @@ const Register = () => {
             </h2>
           </div>
           <form onSubmit={handleSubmit} className="mt-8 space-y-6">
-            <input type="hidden" name="remember" value="true" />
             <div className="rounded-md shadow-sm -space-y-px">
               <div>
                 <label htmlFor="name" className="sr-only">
@@ -160,6 +159,15 @@ const Register = () => {
                   Agreed with the terms and condition
                 </label>
               </div>
+            </div>
+
+            <div>
+              <Link
+                className="font-medium text-violet-600 hover:text-violet-500"
+                to="/login"
+              >
+                Login
+              </Link>
             </div>
 
             <div>
