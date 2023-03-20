@@ -2,37 +2,37 @@ import React from "react";
 
 const Chat = () => {
   return (
-    <div class="w-full lg:col-span-2 lg:block">
-      <div class="w-full grid conversation-row-grid">
-        <div class="relative flex items-center p-3 border-b border-gray-300">
+    <div className="w-full lg:col-span-2 lg:block">
+      <div className="w-full grid conversation-row-grid">
+        <div className="relative flex items-center p-3 border-b border-gray-300">
           <img
-            class="object-cover w-10 h-10 rounded-full"
+            className="object-cover w-10 h-10 rounded-full"
             src="https://cdn.pixabay.com/photo/2018/01/15/07/51/woman-3083383__340.jpg"
             alt="username"
           />
-          <span class="block ml-2 font-bold text-gray-600">Emma</span>
-          <span class="absolute w-3 h-3 bg-green-600 rounded-full left-10 top-3"></span>
+          <span className="block ml-2 font-bold text-gray-600">Emma</span>
+          <span className="absolute w-3 h-3 bg-green-600 rounded-full left-10 top-3"></span>
         </div>
-        <div class="relative w-full p-6 overflow-y-auto">
-          <ul class="space-y-2">
-            <li class="flex justify-start">
-              <div class="relative max-w-xl px-4 py-2 text-gray-700 rounded shadow">
-                <span class="block">Hi</span>
+        <div className="relative w-full p-6 overflow-y-auto">
+          <ul className="space-y-2">
+            <li className="flex justify-start">
+              <div className="relative max-w-xl px-4 py-2 text-gray-700 rounded shadow">
+                <span className="block">Hi</span>
               </div>
             </li>
-            <li class="flex justify-end">
-              <div class="relative max-w-xl px-4 py-2 text-gray-700 bg-gray-100 rounded shadow">
-                <span class="block">Hiiii</span>
+            <li className="flex justify-end">
+              <div className="relative max-w-xl px-4 py-2 text-gray-700 bg-gray-100 rounded shadow">
+                <span className="block">Hiiii</span>
               </div>
             </li>
-            <li class="flex justify-end">
-              <div class="relative max-w-xl px-4 py-2 text-gray-700 bg-gray-100 rounded shadow">
-                <span class="block">how are you?</span>
+            <li className="flex justify-end">
+              <div className="relative max-w-xl px-4 py-2 text-gray-700 bg-gray-100 rounded shadow">
+                <span className="block">how are you?</span>
               </div>
             </li>
-            <li class="flex justify-start">
-              <div class="relative max-w-xl px-4 py-2 text-gray-700 rounded shadow">
-                <span class="block">
+            <li className="flex justify-start">
+              <div className="relative max-w-xl px-4 py-2 text-gray-700 rounded shadow">
+                <span className="block">
                   Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                 </span>
               </div>
@@ -40,11 +40,11 @@ const Chat = () => {
           </ul>
         </div>
 
-        <div class="flex items-center justify-between w-full p-3 border-t border-gray-300">
+        <div className="flex items-center justify-between w-full p-3 border-t border-gray-300">
           <button>
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              class="w-6 h-6 text-gray-500"
+              className="w-6 h-6 text-gray-500"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -61,13 +61,13 @@ const Chat = () => {
           <input
             type="text"
             placeholder="Message"
-            class="block w-full py-2 pl-4 mx-3 bg-gray-100 focus:ring focus:ring-violet-500 rounded-full outline-none focus:text-gray-700"
+            className="block w-full py-2 pl-4 mx-3 bg-gray-100 focus:ring focus:ring-violet-500 rounded-full outline-none focus:text-gray-700"
             name="message"
             required
           />
           <button type="submit">
             <svg
-              class="w-5 h-5 text-gray-500 origin-center transform rotate-90"
+              className="w-5 h-5 text-gray-500 origin-center transform rotate-90"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 20 20"
               fill="currentColor"

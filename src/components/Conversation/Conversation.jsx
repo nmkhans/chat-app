@@ -2,9 +2,9 @@ import React from "react";
 
 const Conversation = () => {
   return (
-    <div class="w-[100px] border-r border-t-0 border-gray-300 lg:col-span-1 md:w-full">
-      <div class="h-[65px] text-center text-grey-500 p-4 border-b border-gray-300 flex md:justify-end justify-center">
-        <svg viewBox="0 0 194.436 194.436" class="w-5 h-5 text-grey-500">
+    <div className="w-[100px] border-r border-t-0 border-gray-300 lg:col-span-1 md:w-full">
+      <div className="h-[65px] text-center text-grey-500 p-4 border-b border-gray-300 flex md:justify-end justify-center">
+        <svg viewBox="0 0 194.436 194.436" className="w-5 h-5 text-grey-500">
           <path
             d="M192.238,34.545L159.894,2.197C158.487,0.79,156.579,0,154.59,0c-1.989,0-3.897,0.79-5.303,2.196l-32.35,32.35
                         c-0.004,0.004-0.008,0.01-0.013,0.014L54.876,96.608c-1.351,1.352-2.135,3.166-2.193,5.076l-1.015,33.361
@@ -20,50 +20,62 @@ const Conversation = () => {
           />
         </svg>
       </div>
-      <ul class="overflow-auto">
+      <ul className="overflow-auto">
         <li>
-          <a class="flex items-center px-3 py-2 text-sm transition duration-150 ease-in-out border-b border-gray-300 cursor-pointer hover:bg-gray-100 focus:outline-none">
+          <a className="flex items-center px-3 py-2 text-sm transition duration-150 ease-in-out border-b border-gray-300 cursor-pointer hover:bg-gray-100 focus:outline-none">
             <img
-              class="object-cover w-10 h-10 rounded-full"
+              className="object-cover w-10 h-10 rounded-full"
               src="https://cdn.pixabay.com/photo/2018/09/12/12/14/man-3672010__340.jpg"
               alt="username"
             />
-            <div class="w-full pb-2 hidden md:block">
-              <div class="flex justify-between">
-                <span class="block ml-2 font-semibold text-gray-600">
+            <div className="w-full pb-2 hidden md:block">
+              <div className="flex justify-between">
+                <span className="block ml-2 font-semibold text-gray-600">
                   Jhon Don
                 </span>
-                <span class="block ml-2 text-sm text-gray-600">25 minutes</span>
+                <span className="block ml-2 text-sm text-gray-600">
+                  25 minutes
+                </span>
               </div>
-              <span class="block ml-2 text-sm text-gray-600">bye</span>
+              <span className="block ml-2 text-sm text-gray-600">bye</span>
             </div>
           </a>
-          <a class="flex items-center px-3 py-2 text-sm transition duration-150 ease-in-out bg-gray-100 border-b border-gray-300 cursor-pointer focus:outline-none">
+          <a className="flex items-center px-3 py-2 text-sm transition duration-150 ease-in-out bg-gray-100 border-b border-gray-300 cursor-pointer focus:outline-none">
             <img
-              class="object-cover w-10 h-10 rounded-full"
+              className="object-cover w-10 h-10 rounded-full"
               src="https://cdn.pixabay.com/photo/2016/06/15/15/25/loudspeaker-1459128__340.png"
               alt="username"
             />
-            <div class="w-full pb-2 hidden md:block">
-              <div class="flex justify-between">
-                <span class="block ml-2 font-semibold text-gray-600">Same</span>
-                <span class="block ml-2 text-sm text-gray-600">50 minutes</span>
+            <div className="w-full pb-2 hidden md:block">
+              <div className="flex justify-between">
+                <span className="block ml-2 font-semibold text-gray-600">
+                  Same
+                </span>
+                <span className="block ml-2 text-sm text-gray-600">
+                  50 minutes
+                </span>
               </div>
-              <span class="block ml-2 text-sm text-gray-600">Good night</span>
+              <span className="block ml-2 text-sm text-gray-600">
+                Good night
+              </span>
             </div>
           </a>
-          <a class="flex items-center px-3 py-2 text-sm transition duration-150 ease-in-out border-b border-gray-300 cursor-pointer hover:bg-gray-100 focus:outline-none">
+          <a className="flex items-center px-3 py-2 text-sm transition duration-150 ease-in-out border-b border-gray-300 cursor-pointer hover:bg-gray-100 focus:outline-none">
             <img
-              class="object-cover w-10 h-10 rounded-full"
+              className="object-cover w-10 h-10 rounded-full"
               src="https://cdn.pixabay.com/photo/2018/01/15/07/51/woman-3083383__340.jpg"
               alt="username"
             />
-            <div class="w-full pb-2 hidden md:block">
-              <div class="flex justify-between">
-                <span class="block ml-2 font-semibold text-gray-600">Emma</span>
-                <span class="block ml-2 text-sm text-gray-600">6 hour</span>
+            <div className="w-full pb-2 hidden md:block">
+              <div className="flex justify-between">
+                <span className="block ml-2 font-semibold text-gray-600">
+                  Emma
+                </span>
+                <span className="block ml-2 text-sm text-gray-600">6 hour</span>
               </div>
-              <span class="block ml-2 text-sm text-gray-600">Good Morning</span>
+              <span className="block ml-2 text-sm text-gray-600">
+                Good Morning
+              </span>
             </div>
           </a>
         </li>

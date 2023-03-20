@@ -9,7 +9,7 @@ import Register from './pages/Register/Register';
 
 function App() {
   const location = useLocation("/");
-
+  
   return (
     <>
       {!["/login", "/register"].includes(location?.pathname) && <Navbar />}
