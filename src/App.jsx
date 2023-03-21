@@ -5,22 +5,30 @@ import Navbar from "./components/Navbar/Navbar";
 import Home from "./pages/Home/Home";
 import Blank from "./pages/Blank/Blank";
 import Login from "./pages/Login/Login";
-import Register from './pages/Register/Register';
+import Register from "./pages/Register/Register";
+import useAuthCheck from "./hooks/useAuthCheck";
 
 function App() {
   const location = useLocation("/");
-  
+  const authCheked = useAuthCheck();
+
   return (
     <>
-      {!["/login", "/register"].includes(location?.pathname) && <Navbar />}
-      <Routes>
-        <Route path="/" element={<Home />}>
-          <Route index element={<Blank />} />
-          <Route path="inbox/:id" element={<Chat />} />
-        </Route>
-        <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
-      </Routes>
+      {!authCheked ? (
+        <div>Authentication checking...</div>
+      ) : (
+        <>
+          {!["/login", "/register"].includes(location?.pathname) && <Navbar />}
+          <Routes>
+            <Route path="/" element={<Home />}>
+              <Route index element={<Blank />} />
+              <Route path="inbox/:id" element={<Chat />} />
+            </Route>
+            <Route path="/login" element={<Login />} />
+            <Route path="/register" element={<Register />} />
+          </Routes>
+        </>
+      )}
     </>
   );
 }
