@@ -7,6 +7,7 @@ import Blank from "./pages/Blank/Blank";
 import Login from "./pages/Login/Login";
 import Register from "./pages/Register/Register";
 import useAuthCheck from "./hooks/useAuthCheck";
+import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
 
 function App() {
   const location = useLocation("/");
@@ -20,7 +21,14 @@ function App() {
         <>
           {!["/login", "/register"].includes(location?.pathname) && <Navbar />}
           <Routes>
-            <Route path="/" element={<Home />}>
+            <Route
+              path="/"
+              element={
+                <PrivateRoute>
+                  <Home />
+                </PrivateRoute>
+              }
+            >
               <Route index element={<Blank />} />
               <Route path="inbox/:id" element={<Chat />} />
             </Route>
