@@ -1,8 +1,9 @@
 import React from "react";
 import ConversationItem from "./../ConversationItem/ConversationItem";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { useGetConversationsQuery } from "../../redux/api/conversationApi";
 import Error from "./../Error/Error";
+import { userLoggedOut } from "../../redux/reducer/authSlice/authSlice";
 
 const Conversation = () => {
   const auth = useSelector((state) => state.auth);
@@ -12,6 +13,7 @@ const Conversation = () => {
     isError,
     error,
   } = useGetConversationsQuery(auth?.user?.email);
+  const dispatch = useDispatch();
 
   //? render desicion
   let content = null;
@@ -23,12 +25,18 @@ const Conversation = () => {
       </li>
     );
 
-  if (!isLoading && isError)
+  if (!isLoading && isError) {
+    if (error.status === 401) {
+      dispatch(userLoggedOut());
+      localStorage.clear();
+    }
+
     content = (
       <li>
         <Error message={error?.data} />
       </li>
     );
+  }
 
   if (!isLoading && !isError && converations.length === 0)
     content = (
@@ -40,7 +48,7 @@ const Conversation = () => {
   if (!isLoading && !isError && converations.length > 0)
     content = converations.map((conversation) => (
       <ConversationItem
-        key={conversation.timestamp}
+        key={conversation.id}
         conversation={conversation}
         loggedUser={auth?.user}
       />
