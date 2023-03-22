@@ -1,6 +1,51 @@
 import React from "react";
+import ConversationItem from "./../ConversationItem/ConversationItem";
+import { useSelector } from "react-redux";
+import { useGetConversationsQuery } from "../../redux/api/conversationApi";
+import Error from "./../Error/Error";
 
 const Conversation = () => {
+  const auth = useSelector((state) => state.auth);
+  const {
+    data: converations,
+    isLoading,
+    isError,
+    error,
+  } = useGetConversationsQuery(auth?.user?.email);
+
+  //? render desicion
+  let content = null;
+
+  if (isLoading)
+    content = (
+      <li>
+        <p>Loading...</p>
+      </li>
+    );
+
+  if (!isLoading && isError)
+    content = (
+      <li>
+        <Error message={error?.data} />
+      </li>
+    );
+
+  if (!isLoading && !isError && converations.length === 0)
+    content = (
+      <li>
+        <Error message="No conversations available!" />
+      </li>
+    );
+
+  if (!isLoading && !isError && converations.length > 0)
+    content = converations.map((conversation) => (
+      <ConversationItem
+        key={conversation.timestamp}
+        conversation={conversation}
+        loggedUser={auth?.user}
+      />
+    ));
+
   return (
     <div className="w-[100px] border-r border-t-0 border-gray-300 lg:col-span-1 md:w-full">
       <div className="h-[65px] text-center text-grey-500 p-4 border-b border-gray-300 flex md:justify-end justify-center">
@@ -20,66 +65,7 @@ const Conversation = () => {
           />
         </svg>
       </div>
-      <ul className="overflow-auto">
-        <li>
-          <a className="flex items-center px-3 py-2 text-sm transition duration-150 ease-in-out border-b border-gray-300 cursor-pointer hover:bg-gray-100 focus:outline-none">
-            <img
-              className="object-cover w-10 h-10 rounded-full"
-              src="https://cdn.pixabay.com/photo/2018/09/12/12/14/man-3672010__340.jpg"
-              alt="username"
-            />
-            <div className="w-full pb-2 hidden md:block">
-              <div className="flex justify-between">
-                <span className="block ml-2 font-semibold text-gray-600">
-                  Jhon Don
-                </span>
-                <span className="block ml-2 text-sm text-gray-600">
-                  25 minutes
-                </span>
-              </div>
-              <span className="block ml-2 text-sm text-gray-600">bye</span>
-            </div>
-          </a>
-          <a className="flex items-center px-3 py-2 text-sm transition duration-150 ease-in-out bg-gray-100 border-b border-gray-300 cursor-pointer focus:outline-none">
-            <img
-              className="object-cover w-10 h-10 rounded-full"
-              src="https://cdn.pixabay.com/photo/2016/06/15/15/25/loudspeaker-1459128__340.png"
-              alt="username"
-            />
-            <div className="w-full pb-2 hidden md:block">
-              <div className="flex justify-between">
-                <span className="block ml-2 font-semibold text-gray-600">
-                  Same
-                </span>
-                <span className="block ml-2 text-sm text-gray-600">
-                  50 minutes
-                </span>
-              </div>
-              <span className="block ml-2 text-sm text-gray-600">
-                Good night
-              </span>
-            </div>
-          </a>
-          <a className="flex items-center px-3 py-2 text-sm transition duration-150 ease-in-out border-b border-gray-300 cursor-pointer hover:bg-gray-100 focus:outline-none">
-            <img
-              className="object-cover w-10 h-10 rounded-full"
-              src="https://cdn.pixabay.com/photo/2018/01/15/07/51/woman-3083383__340.jpg"
-              alt="username"
-            />
-            <div className="w-full pb-2 hidden md:block">
-              <div className="flex justify-between">
-                <span className="block ml-2 font-semibold text-gray-600">
-                  Emma
-                </span>
-                <span className="block ml-2 text-sm text-gray-600">6 hour</span>
-              </div>
-              <span className="block ml-2 text-sm text-gray-600">
-                Good Morning
-              </span>
-            </div>
-          </a>
-        </li>
-      </ul>
+      <ul className="overflow-auto">{content}</ul>
     </div>
   );
 };

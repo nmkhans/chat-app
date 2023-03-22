@@ -8,7 +8,7 @@ const api = createApi({
       const token = getState()?.auth?.accessToken;
 
       if (token) {
-        headers.set("Authorization", `$Bearer {token}`)
+        headers.set("Authorization", `Bearer ${token}`)
       }
 
       return headers
