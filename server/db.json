@@ -42,12 +42,13 @@
         },
         {
           "email": "saad@learnwithsumit.com",
+          "password": "$2a$10$QwAaboLrPQznK/dFW0D1iu6aRG4KdaVsNYqyJFqJQF0CJZ5bzn/aS",
           "name": "Saad",
           "id": 2
         }
       ],
-      "message": "how are you saad",
-      "timestamp": 1679662851187,
+      "message": "saad",
+      "timestamp": 1679678186440,
       "id": 2,
       "sender": "sumit@learnwithsumit.com",
       "data": {
@@ -83,8 +84,8 @@
           "id": 3
         }
       ],
-      "message": "hello akash",
-      "timestamp": 1679663281035,
+      "message": "akash, should we start doing projects on typescript?",
+      "timestamp": 1679678034300,
       "id": 3
     }
   ],
@@ -316,6 +317,244 @@
       "message": "hello akash",
       "timestamp": 1679663281035,
       "id": 14
+    },
+    {
+      "conversationId": 3,
+      "sender": {
+        "email": "sumit@learnwithsumit.com",
+        "name": "Sumit",
+        "id": 1
+      },
+      "reciver": {
+        "email": "akash@learnwithsumit.com",
+        "password": "$2a$10$lpx3hz9hiN9zp4n/30LHset1/tt/30.Cq6w6f/kjTL.IUM7PgGniG",
+        "name": "Akash",
+        "id": 3
+      },
+      "message": "akash, is prayer over?",
+      "timestamp": 1679675370107,
+      "id": 15
+    },
+    {
+      "conversationId": 3,
+      "sender": {
+        "email": "sumit@learnwithsumit.com",
+        "name": "Sumit",
+        "id": 1
+      },
+      "reciver": {
+        "email": "akash@learnwithsumit.com",
+        "password": "$2a$10$lpx3hz9hiN9zp4n/30LHset1/tt/30.Cq6w6f/kjTL.IUM7PgGniG",
+        "name": "Akash",
+        "id": 3
+      },
+      "message": "akash are you here?",
+      "timestamp": 1679675384332,
+      "id": 16
+    },
+    {
+      "conversationId": 3,
+      "sender": {
+        "email": "sumit@learnwithsumit.com",
+        "name": "Sumit",
+        "id": 1
+      },
+      "reciver": {
+        "email": "akash@learnwithsumit.com",
+        "password": "$2a$10$lpx3hz9hiN9zp4n/30LHset1/tt/30.Cq6w6f/kjTL.IUM7PgGniG",
+        "name": "Akash",
+        "id": 3
+      },
+      "message": "hi",
+      "timestamp": 1679675422814,
+      "id": 17
+    },
+    {
+      "conversationId": 3,
+      "sender": {
+        "email": "sumit@learnwithsumit.com",
+        "name": "Sumit",
+        "id": 1
+      },
+      "reciver": {
+        "email": "akash@learnwithsumit.com",
+        "password": "$2a$10$lpx3hz9hiN9zp4n/30LHset1/tt/30.Cq6w6f/kjTL.IUM7PgGniG",
+        "name": "Akash",
+        "id": 3
+      },
+      "message": "hi",
+      "timestamp": 1679675447824,
+      "id": 18
+    },
+    {
+      "conversationId": 3,
+      "sender": {
+        "email": "sumit@learnwithsumit.com",
+        "name": "Sumit",
+        "id": 1
+      },
+      "reciver": {
+        "email": "akash@learnwithsumit.com",
+        "password": "$2a$10$lpx3hz9hiN9zp4n/30LHset1/tt/30.Cq6w6f/kjTL.IUM7PgGniG",
+        "name": "Akash",
+        "id": 3
+      },
+      "message": "sdfsf",
+      "timestamp": 1679675482374,
+      "id": 19
+    },
+    {
+      "conversationId": 3,
+      "sender": {
+        "email": "sumit@learnwithsumit.com",
+        "name": "Sumit",
+        "id": 1
+      },
+      "reciver": {
+        "email": "akash@learnwithsumit.com",
+        "password": "$2a$10$lpx3hz9hiN9zp4n/30LHset1/tt/30.Cq6w6f/kjTL.IUM7PgGniG",
+        "name": "Akash",
+        "id": 3
+      },
+      "message": "hi",
+      "timestamp": 1679675615710,
+      "id": 20
+    },
+    {
+      "conversationId": 3,
+      "sender": {
+        "email": "sumit@learnwithsumit.com",
+        "name": "Sumit",
+        "id": 1
+      },
+      "reciver": {
+        "email": "akash@learnwithsumit.com",
+        "password": "$2a$10$lpx3hz9hiN9zp4n/30LHset1/tt/30.Cq6w6f/kjTL.IUM7PgGniG",
+        "name": "Akash",
+        "id": 3
+      },
+      "message": "hi",
+      "timestamp": 1679675786408,
+      "id": 21
+    },
+    {
+      "conversationId": 3,
+      "sender": {
+        "email": "sumit@learnwithsumit.com",
+        "name": "Sumit",
+        "id": 1
+      },
+      "reciver": {
+        "email": "akash@learnwithsumit.com",
+        "password": "$2a$10$lpx3hz9hiN9zp4n/30LHset1/tt/30.Cq6w6f/kjTL.IUM7PgGniG",
+        "name": "Akash",
+        "id": 3
+      },
+      "message": "hello akash",
+      "timestamp": 1679675797055,
+      "id": 22
+    },
+    {
+      "conversationId": 3,
+      "sender": {
+        "email": "sumit@learnwithsumit.com",
+        "name": "Sumit",
+        "id": 1
+      },
+      "reciver": {
+        "email": "akash@learnwithsumit.com",
+        "password": "$2a$10$lpx3hz9hiN9zp4n/30LHset1/tt/30.Cq6w6f/kjTL.IUM7PgGniG",
+        "name": "Akash",
+        "id": 3
+      },
+      "message": "akash",
+      "timestamp": 1679675924853,
+      "id": 23
+    },
+    {
+      "conversationId": 3,
+      "sender": {
+        "email": "sumit@learnwithsumit.com",
+        "name": "Sumit",
+        "id": 1
+      },
+      "reciver": {
+        "email": "akash@learnwithsumit.com",
+        "password": "$2a$10$lpx3hz9hiN9zp4n/30LHset1/tt/30.Cq6w6f/kjTL.IUM7PgGniG",
+        "name": "Akash",
+        "id": 3
+      },
+      "message": "akash",
+      "timestamp": 1679675932885,
+      "id": 24
+    },
+    {
+      "conversationId": 3,
+      "sender": {
+        "email": "sumit@learnwithsumit.com",
+        "name": "Sumit",
+        "id": 1
+      },
+      "reciver": {
+        "email": "akash@learnwithsumit.com",
+        "password": "$2a$10$lpx3hz9hiN9zp4n/30LHset1/tt/30.Cq6w6f/kjTL.IUM7PgGniG",
+        "name": "Akash",
+        "id": 3
+      },
+      "message": "how are you?",
+      "timestamp": 1679675936927,
+      "id": 25
+    },
+    {
+      "conversationId": 3,
+      "sender": {
+        "email": "sumit@learnwithsumit.com",
+        "name": "Sumit",
+        "id": 1
+      },
+      "reciver": {
+        "email": "akash@learnwithsumit.com",
+        "password": "$2a$10$lpx3hz9hiN9zp4n/30LHset1/tt/30.Cq6w6f/kjTL.IUM7PgGniG",
+        "name": "Akash",
+        "id": 3
+      },
+      "message": "akash, should we start doing projects on typescript?",
+      "timestamp": 1679678034300,
+      "id": 26
+    },
+    {
+      "conversationId": 2,
+      "sender": {
+        "email": "sumit@learnwithsumit.com",
+        "name": "Sumit",
+        "id": 1
+      },
+      "reciver": {
+        "email": "saad@learnwithsumit.com",
+        "password": "$2a$10$QwAaboLrPQznK/dFW0D1iu6aRG4KdaVsNYqyJFqJQF0CJZ5bzn/aS",
+        "name": "Saad",
+        "id": 2
+      },
+      "message": "saad are you available?",
+      "timestamp": 1679678182006,
+      "id": 27
+    },
+    {
+      "conversationId": 2,
+      "sender": {
+        "email": "sumit@learnwithsumit.com",
+        "name": "Sumit",
+        "id": 1
+      },
+      "reciver": {
+        "email": "saad@learnwithsumit.com",
+        "password": "$2a$10$QwAaboLrPQznK/dFW0D1iu6aRG4KdaVsNYqyJFqJQF0CJZ5bzn/aS",
+        "name": "Saad",
+        "id": 2
+      },
+      "message": "saad",
+      "timestamp": 1679678186440,
+      "id": 28
     }
   ]
 }

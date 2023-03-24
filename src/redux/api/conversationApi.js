@@ -42,7 +42,7 @@ export const conversationApi = api.injectEndpoints({
               (user) => user.email !== arg.sender
             );
 
-            dispatch(
+            const res = await dispatch(
               messagesApi.endpoints.addMessage.initiate({
                 conversationId: conversation.id,
                 sender: senderUser,
@@ -50,6 +50,16 @@ export const conversationApi = api.injectEndpoints({
                 message: arg.data.message,
                 timestamp: arg.data.timestamp,
               })
+            ).unwrap();
+
+            dispatch(
+              api.util.updateQueryData(
+                "getMessages",
+                res.conversationId.toString(),
+                (draft) => {
+                  draft.push(res);
+                }
+              )
             );
           }
         } catch (error) {
@@ -65,6 +75,7 @@ export const conversationApi = api.injectEndpoints({
       }),
       async onQueryStarted(arg, { queryFulfilled, dispatch }) {
         //? optimistic data update
+
         const conversationPatchResult = dispatch(
           api.util.updateQueryData(
             "getConversations",
@@ -92,7 +103,7 @@ export const conversationApi = api.injectEndpoints({
               (user) => user.email !== arg.sender
             );
 
-            dispatch(
+            const res = await dispatch(
               messagesApi.endpoints.addMessage.initiate({
                 conversationId: conversation.id,
                 sender: senderUser,
@@ -100,6 +111,18 @@ export const conversationApi = api.injectEndpoints({
                 message: arg.data.message,
                 timestamp: arg.data.timestamp,
               })
+            ).unwrap();
+
+            //? pressimistic cache update
+
+            dispatch(
+              api.util.updateQueryData(
+                "getMessages",
+                res.conversationId.toString(),
+                (draft) => {
+                  draft.push(res);
+                }
+              )
             );
           }
         } catch (err) {
