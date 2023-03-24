@@ -33,25 +33,6 @@
   ],
   "conversations": [
     {
-      "participants": "sumit@learnwithsumit.com-akash@learnwithsumit.com",
-      "users": [
-        {
-          "email": "sumit@learnwithsumit.com",
-          "name": "Sumit",
-          "id": 1
-        },
-        {
-          "email": "akash@learnwithsumit.com",
-          "password": "$2a$10$lpx3hz9hiN9zp4n/30LHset1/tt/30.Cq6w6f/kjTL.IUM7PgGniG",
-          "name": "Akash",
-          "id": 3
-        }
-      ],
-      "message": "hello akash",
-      "timestamp": 1679590113639,
-      "id": 1
-    },
-    {
       "participants": "sumit@learnwithsumit.com-saad@learnwithsumit.com",
       "users": [
         {
@@ -65,8 +46,8 @@
           "id": 2
         }
       ],
-      "message": "js that project over saad?",
-      "timestamp": 1679659199412,
+      "message": "how are you saad",
+      "timestamp": 1679662851187,
       "id": 2,
       "sender": "sumit@learnwithsumit.com",
       "data": {
@@ -86,6 +67,25 @@
         "message": "hi saad",
         "timestamp": 1679658878581
       }
+    },
+    {
+      "participants": "sumit@learnwithsumit.com-akash@learnwithsumit.com",
+      "users": [
+        {
+          "email": "sumit@learnwithsumit.com",
+          "name": "Sumit",
+          "id": 1
+        },
+        {
+          "email": "akash@learnwithsumit.com",
+          "password": "$2a$10$lpx3hz9hiN9zp4n/30LHset1/tt/30.Cq6w6f/kjTL.IUM7PgGniG",
+          "name": "Akash",
+          "id": 3
+        }
+      ],
+      "message": "hello akash",
+      "timestamp": 1679663281035,
+      "id": 3
     }
   ],
   "messages": [
@@ -202,6 +202,120 @@
       "message": "js that project over saad?",
       "timestamp": 1679659199412,
       "id": 7
+    },
+    {
+      "conversationId": 2,
+      "sender": {
+        "email": "sumit@learnwithsumit.com",
+        "name": "Sumit",
+        "id": 1
+      },
+      "reciver": {
+        "email": "saad@learnwithsumit.com",
+        "name": "Saad",
+        "id": 2
+      },
+      "message": "saad have you finished your iftar?",
+      "timestamp": 1679662116769,
+      "id": 8
+    },
+    {
+      "conversationId": 2,
+      "sender": {
+        "email": "sumit@learnwithsumit.com",
+        "name": "Sumit",
+        "id": 1
+      },
+      "reciver": {
+        "email": "saad@learnwithsumit.com",
+        "name": "Saad",
+        "id": 2
+      },
+      "message": "hy saad",
+      "timestamp": 1679662126129,
+      "id": 9
+    },
+    {
+      "conversationId": 2,
+      "sender": {
+        "email": "sumit@learnwithsumit.com",
+        "name": "Sumit",
+        "id": 1
+      },
+      "reciver": {
+        "email": "saad@learnwithsumit.com",
+        "name": "Saad",
+        "id": 2
+      },
+      "message": "need to learn next js saad",
+      "timestamp": 1679662772899,
+      "id": 10
+    },
+    {
+      "conversationId": 2,
+      "sender": {
+        "email": "sumit@learnwithsumit.com",
+        "name": "Sumit",
+        "id": 1
+      },
+      "reciver": {
+        "email": "saad@learnwithsumit.com",
+        "name": "Saad",
+        "id": 2
+      },
+      "message": "hello saad",
+      "timestamp": 1679662840753,
+      "id": 11
+    },
+    {
+      "conversationId": 2,
+      "sender": {
+        "email": "sumit@learnwithsumit.com",
+        "name": "Sumit",
+        "id": 1
+      },
+      "reciver": {
+        "email": "saad@learnwithsumit.com",
+        "name": "Saad",
+        "id": 2
+      },
+      "message": "how are you saad",
+      "timestamp": 1679662851187,
+      "id": 12
+    },
+    {
+      "conversationId": 3,
+      "sender": {
+        "email": "sumit@learnwithsumit.com",
+        "name": "Sumit",
+        "id": 1
+      },
+      "reciver": {
+        "email": "akash@learnwithsumit.com",
+        "password": "$2a$10$lpx3hz9hiN9zp4n/30LHset1/tt/30.Cq6w6f/kjTL.IUM7PgGniG",
+        "name": "Akash",
+        "id": 3
+      },
+      "message": "hi akash",
+      "timestamp": 1679663022860,
+      "id": 13
+    },
+    {
+      "conversationId": 3,
+      "sender": {
+        "email": "sumit@learnwithsumit.com",
+        "name": "Sumit",
+        "id": 1
+      },
+      "reciver": {
+        "email": "akash@learnwithsumit.com",
+        "password": "$2a$10$lpx3hz9hiN9zp4n/30LHset1/tt/30.Cq6w6f/kjTL.IUM7PgGniG",
+        "name": "Akash",
+        "id": 3
+      },
+      "message": "hello akash",
+      "timestamp": 1679663281035,
+      "id": 14
     }
   ]
 }

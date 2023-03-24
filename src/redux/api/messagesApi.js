@@ -1,21 +1,20 @@
-import api from "./api"
+import api from "./api";
 
 export const messagesApi = api.injectEndpoints({
-  endpoints: builder => ({
+  endpoints: (builder) => ({
     getMessages: builder.query({
-      query: (id) => `/messages?conversationId=${id}&_sort=timestamp&_order=desc&_page=1&_limit=5`
+      query: (id) =>
+        `/messages?conversationId=${id}&_sort=timestamp&_order=desc&_page=1&_limit=5`,
     }),
     addMessage: builder.mutation({
       query: (data) => ({
         url: "/messages",
         method: "POST",
-        body: data
-      })
+        body: data,
+      }),
     }),
-  })
-})
+  }),
+});
 
-export const {
-  useGetMessagesQuery,
-  useAddMessageMutation
-} = messagesApi;
+export const { useGetMessagesQuery, useAddMessageMutation } =
+  messagesApi;
