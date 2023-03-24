@@ -52,23 +52,40 @@
       "id": 1
     },
     {
-      "participants": "saad@learnwithsumit.com-sumit@learnwithsumit.com",
+      "participants": "sumit@learnwithsumit.com-saad@learnwithsumit.com",
       "users": [
+        {
+          "email": "sumit@learnwithsumit.com",
+          "name": "Sumit",
+          "id": 1
+        },
         {
           "email": "saad@learnwithsumit.com",
           "name": "Saad",
           "id": 2
-        },
-        {
-          "email": "sumit@learnwithsumit.com",
-          "password": "$2a$10$Fsd8wqTFuS0ZO43wmX9zye2zRMwhJyNMJD/wLNn3NE8t1EAY4vRKm",
-          "name": "Sumit",
-          "id": 1
         }
       ],
-      "message": "hello sumit vai",
-      "timestamp": 1679590504664,
-      "id": 2
+      "message": "js that project over saad?",
+      "timestamp": 1679659199412,
+      "id": 2,
+      "sender": "sumit@learnwithsumit.com",
+      "data": {
+        "participants": "sumit@learnwithsumit.com-saad@learnwithsumit.com",
+        "users": [
+          {
+            "email": "sumit@learnwithsumit.com",
+            "name": "Sumit",
+            "id": 1
+          },
+          {
+            "email": "saad@learnwithsumit.com",
+            "name": "Saad",
+            "id": 2
+          }
+        ],
+        "message": "hi saad",
+        "timestamp": 1679658878581
+      }
     }
   ],
   "messages": [
@@ -105,6 +122,86 @@
       "message": "hello sumit vai",
       "timestamp": 1679590504664,
       "id": 2
+    },
+    {
+      "conversationId": 3,
+      "sender": {
+        "email": "sumit@learnwithsumit.com",
+        "name": "Sumit",
+        "id": 1
+      },
+      "reciver": {
+        "email": "saad@learnwithsumit.com",
+        "name": "Saad",
+        "id": 2
+      },
+      "message": "hi saad",
+      "timestamp": 1679658089514,
+      "id": 3
+    },
+    {
+      "conversationId": 2,
+      "sender": {
+        "email": "sumit@learnwithsumit.com",
+        "name": "Sumit",
+        "id": 1
+      },
+      "reciver": {
+        "email": "saad@learnwithsumit.com",
+        "name": "Saad",
+        "id": 2
+      },
+      "message": "hi saad",
+      "timestamp": 1679658972876,
+      "id": 4
+    },
+    {
+      "conversationId": 2,
+      "sender": {
+        "email": "sumit@learnwithsumit.com",
+        "name": "Sumit",
+        "id": 1
+      },
+      "reciver": {
+        "email": "saad@learnwithsumit.com",
+        "name": "Saad",
+        "id": 2
+      },
+      "message": "how are you saad?",
+      "timestamp": 1679659067561,
+      "id": 5
+    },
+    {
+      "conversationId": 2,
+      "sender": {
+        "email": "sumit@learnwithsumit.com",
+        "name": "Sumit",
+        "id": 1
+      },
+      "reciver": {
+        "email": "saad@learnwithsumit.com",
+        "name": "Saad",
+        "id": 2
+      },
+      "message": "how are you saad?",
+      "timestamp": 1679659068861,
+      "id": 6
+    },
+    {
+      "conversationId": 2,
+      "sender": {
+        "email": "sumit@learnwithsumit.com",
+        "name": "Sumit",
+        "id": 1
+      },
+      "reciver": {
+        "email": "saad@learnwithsumit.com",
+        "name": "Saad",
+        "id": 2
+      },
+      "message": "js that project over saad?",
+      "timestamp": 1679659199412,
+      "id": 7
     }
   ]
 }
