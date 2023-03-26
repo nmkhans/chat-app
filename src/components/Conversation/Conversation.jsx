@@ -36,11 +36,6 @@ const Conversation = () => {
     );
 
   if (!isLoading && isError) {
-    if (error.status === 401) {
-      dispatch(userLoggedOut());
-      localStorage.clear();
-    }
-
     content = (
       <li>
         <Error message={error?.data} />

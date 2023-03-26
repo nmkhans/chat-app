@@ -1,11 +1,44 @@
 import api from "./api";
 import { messagesApi } from "./messagesApi";
+import { io } from "socket.io-client";
 
 export const conversationApi = api.injectEndpoints({
   endpoints: (builder) => ({
     getConversations: builder.query({
       query: (email) =>
         `/conversations?participants_like=${email}&_sort=timestamp&_order=desc&_page=1&_limit=5`,
+      async onCacheEntryAdded(
+        arg,
+        { updateCachedData, cacheDataLoaded, cacheEntryRemoved }
+      ) {
+        const socket = io("http://localhost:9000", {
+          reconnectionDelay: 1000,
+          reconnection: true,
+          reconnectionAttempts: 10,
+          transports: ["websocket"],
+          agent: false,
+          upgrade: false,
+          rejectUnauthorized: false,
+        });
+
+        try {
+          await cacheDataLoaded;
+          socket.on("conversation", (data) => {
+            updateCachedData((draft) => {
+              const conversation = draft.find(
+                (c) => c.id == data?.data?.id
+              );
+
+              if (conversation?.id) {
+                conversation.message = data?.data?.message;
+                conversation.timestamp = data?.data?.timestamp;
+              } else {
+                draft.push(data?.data);
+              }
+            });
+          });
+        } catch (error) {}
+      },
     }),
     getConversation: builder.query({
       query: ({ userEmail, participantEmail }) =>
